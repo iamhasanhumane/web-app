@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe; 
+}
+
+#sidebar{
+    width: 70px;
+    min-width: 70px;
+    transition: all .25s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: black;   
+}
+
+#sidebar.expand{
+    width: 260px;
+    min-width: 260px; 
+} 
+
+#toggle-btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+#toggle-btn i{
+    font-size: 1.5rem;
+    color: #fff;   
+}
+
+.sidebar-logo{
+    margin: auto 0;
+}
+
+.sidebar-logo a{
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600; 
+}
+
+#sidebar:not(.expand) .sidebar-logo, 
+#sidebar:not(.expand) a.sidebar-link span{
+    display: none; 
+}
+
+.sidebar-nav{
+    padding: 2rem 0;
+    flex: 1 1 aut0;
+}
+
+a.sidebar-link{
+    padding: .625rem 1.625rem;
+    color: #fff;
+    display: block;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i{
+    font-size: 1.5rem; 
+    margin-right: .75rem; 
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(0,123,190,1);   
+}
+
+.sidebar-item{
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #0e2238;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+} 
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown{
+    display: block;
+    max-height: 15rem;
+    width: 100%;
+    opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after{
+    border: solid;
+    border-width: 0 0.75rem 0.75rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;    
+}
+
+.square-box {
+    width: 160px; /* Adjust width as needed */
+    height: 160px; /* Same as width for a square */
+    background-color: #f0f0f0; /* Background color */
+    border: 1px solid #ccc; /* Border color and thickness */
+    border-radius: 10px;
+    position: absolute; /* Position the element relative to its closest positioned ancestor */
+    top: 10px; /* Align the square box to the top */
+    left: 40px;  
+}
+
+.curvy-button {
+    border: 2px solid;
+    border-radius: 50px; /* Adjust the border-radius value to control the curve */
+    padding: 1px ;
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.curvy-button:hover {
+    background-color: #45a049; /* Button background color on hover */
+}  
+
+.icon-text {
+    display: none; /* Hide the text by default */
+}
+
+.icon-container:hover .bi {
+    display: none; /* Hide the icon when hovering over the container */
+}
+
+.icon-container:hover .icon-text {
+    display: inline; /* Display the text when hovering over the icon container */
+}
+
+.rectangle {
+    width: 160px; /* Set the width */
+    height: 100px; /* Set the height */
+    background-color: rgb(220,220,220); /* Set the background color */
+    border: 5px solid; /* Add a border */
+    border-radius: 15px;
+    color: white; /* Set text color */
+    text-align: center; /* Align text horizontally */
+    line-height: 50px; /* Vertically center text */  
+}
+
+.rectangle-2 {
+    width: 145px; /* Set the width */
+    height: 100px; /* Set the height */
+    background-color: rgb(220,220,220); /* Set the background color */
+    border: 5px solid; /* Add a border */
+    border-radius: 20px;
+    color: white; /* Set text color */
+    text-align: center; /* Align text horizontally */
+    line-height: 50px; /* Vertically center text */  
+    float: left;
+}
+
